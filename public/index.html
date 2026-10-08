@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubre la Contraseña</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <main class="game">
+
+    <header>
+      <div class="badge">🔐 JUEGO DE INVESTIGACIÓN</div>
+      <h1>Descubre la Contraseña</h1>
+      <p class="subtitle">
+        Encuentra las pistas y descubre la contraseña de cada nivel.
+      </p>
+    </header>
+
+    <section class="progress">
+      <div class="progress-info">
+        <span>Progreso</span>
+        <span id="progressText">Nivel 1 de 5</span>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+    </section>
+
+    <section class="card">
+
+      <div class="level">
+        <span id="levelNumber">NIVEL 01</span>
+        <span id="difficulty">FÁCIL</span>
+      </div>
+
+      <h2 id="levelTitle">La primera pista</h2>
+
+      <p id="story">
+        Tu investigación comienza aquí...
+      </p>
+
+      <div class="clue">
+        <div class="clue-title">💡 PISTA</div>
+        <p id="clueText"></p>
+      </div>
+
+      <div class="input-area">
+        <input
+          id="passwordInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Escribe la contraseña..."
+        >
+
+        <button id="checkButton">
+          DESBLOQUEAR
+        </button>
+      </div>
+
+      <p id="message"></p>
+
+      <button id="hintButton" class="hint-button">
+        💡 Necesito otra pista
+      </button>
+
+      <div id="extraHint" class="extra-hint hidden"></div>
+
+    </section>
+
+    <footer>
+      <span>🔒 Sistema de investigación</span>
+      <span id="attempts">Intentos: 0</span>
+    </footer>
+
+  </main>
+
+  <div id="successScreen" class="overlay hidden">
+
+    <div class="success-box">
+
+      <div class="success-icon">🔓</div>
+
+      <h2 id="successTitle">¡Nivel desbloqueado!</h2>
+
+      <p id="successText">
+        Has descubierto la contraseña.
+      </p>
+
+      <button id="nextButton">
+        SIGUIENTE NIVEL →
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
